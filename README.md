@@ -70,7 +70,7 @@ BeasisMatch menggunakan pendekatan:
 git clone https://github.com/USERNAME/beasismatch.git
 cd beasismatch/src
 
-2. Install Dependencies
+## 2. Install Dependencies
 composer install
 npm install && npm run build
 3. Environment Setup
