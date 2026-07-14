@@ -1,61 +1,102 @@
 # 🎓 BeasisMatch
 
-> Smart Scholarship Recommendation & Matching Platform
+<div align="center">
 
-BeasisMatch adalah platform web berbasis Laravel yang membantu mahasiswa menemukan dan mencocokkan beasiswa sesuai profil akademik secara otomatis dan real-time.
+### Smart Scholarship Recommendation & Matching Platform
+
+Platform rekomendasi beasiswa berbasis web yang membantu mahasiswa menemukan beasiswa sesuai profil akademik dan kriteria pendaftaran.
+
+</div>
 
 ---
 
-## 🚀 Features
+## 📌 Tentang BeasisMatch
 
-### 👤 Authentication
-- Login & Register (Email)
-- Login dengan Google OAuth
+**BeasisMatch** adalah platform web berbasis Laravel yang dirancang untuk membantu mahasiswa mencari, menyaring, dan mencocokkan beasiswa berdasarkan profil akademik pengguna.
+
+Pengguna dapat melengkapi profil akademik, melihat informasi beasiswa, memperoleh rekomendasi beasiswa, serta berinteraksi melalui forum diskusi. Sistem juga menyediakan dashboard admin untuk mengelola pengguna dan data beasiswa.
+
+---
+
+## 🚀 Fitur Utama
+
+### 👤 Autentikasi
+
+- Registrasi menggunakan email
+- Login menggunakan email
+- Login menggunakan Google OAuth
 - Session-based authentication
+- Logout pengguna
 
-### 🎯 Recommendation System
-- Matching beasiswa berdasarkan profil user
-- Filtering berdasarkan kriteria akademik
-- Rekomendasi otomatis
+### 🎯 Sistem Rekomendasi
 
-### 📚 Scholarship Management
-- CRUD data beasiswa
-- Detail informasi beasiswa
-- Kategori dan filter
+- Pencocokan beasiswa berdasarkan profil pengguna
+- Penyaringan berdasarkan kriteria akademik
+- Rekomendasi beasiswa secara otomatis
+- Informasi tingkat kecocokan pengguna dengan beasiswa
+
+### 📚 Manajemen Beasiswa
+
+- Menampilkan daftar beasiswa
+- Menampilkan detail beasiswa
+- Pencarian dan filter beasiswa
+- Kategori beasiswa
+- Pengelolaan data beasiswa melalui proses CRUD
 
 ### 💬 Forum Diskusi
-- Forum global semua user
+
+- Forum diskusi untuk seluruh pengguna
 - Tanya jawab antar mahasiswa
-- Komentar & interaksi
+- Komentar pada setiap diskusi
+- Interaksi antar pengguna
 
-### 🛠 Admin Panel
-- Dashboard admin (Filament)
-- Manajemen user
+### 🛠️ Dashboard Admin
+
+- Dashboard admin menggunakan Filament
+- Manajemen data pengguna
 - Manajemen data beasiswa
+- Manajemen kategori beasiswa
+- Pemantauan data melalui admin panel
 
 ---
 
-## 🧱 Tech Stack
+## ⚙️ Alur Sistem
 
-- Laravel 11
-- PHP 8.3
-- MySQL / MariaDB
-- Tailwind CSS
-- Filament Admin
-- Google OAuth (Socialite)
-- Docker (Nginx + PHP + DB)
-
----
-
-## ⚙️ System Overview
-
-User melakukan login → mengisi profil → sistem mencocokkan dengan database beasiswa → hasil rekomendasi ditampilkan secara real-time.
+1. Pengguna melakukan registrasi atau login.
+2. Pengguna melengkapi profil dan data akademik.
+3. Sistem membandingkan profil pengguna dengan kriteria beasiswa.
+4. Sistem menghitung tingkat kecocokan beasiswa.
+5. Hasil rekomendasi ditampilkan kepada pengguna.
+6. Pengguna dapat membuka detail beasiswa dan mengikuti forum diskusi.
 
 ---
 
-## 🚀 Installation Guide
+## 🧱 Teknologi yang Digunakan
 
-### 1. Clone Repository
-```bash
-git clone https://github.com/USERNAME/beasismatch.git
-cd beasismatch/src
+| Teknologi | Kegunaan |
+|---|---|
+| Laravel 11 | Framework backend |
+| PHP 8.3 | Bahasa pemrograman backend |
+| MySQL / MariaDB | Database |
+| Tailwind CSS | Styling antarmuka |
+| Filament | Dashboard dan panel admin |
+| Laravel Socialite | Google OAuth |
+| Docker | Container aplikasi |
+| Nginx | Web server |
+| JavaScript | Interaksi antarmuka |
+| Vite | Build tool frontend |
+
+---
+
+## 📂 Struktur Utama Project
+
+```text
+beasismatch/
+├── db/                  # Konfigurasi database
+├── docs/                # Dokumentasi project
+├── nginx/               # Konfigurasi Nginx
+├── php/                 # Konfigurasi PHP
+├── public/              # File publik
+├── src/                 # Source code aplikasi Laravel
+├── docker-compose.yml   # Konfigurasi Docker
+└── README.md            # Dokumentasi repository
