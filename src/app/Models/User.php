@@ -17,7 +17,7 @@ use Spatie\Permission\Traits\HasRoles;
 class User extends Authenticatable implements FilamentUser, HasAvatar
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, HasRoles, Notifiable;
+    use HasFactory, HasRoles, Notifiable, \BezhanSalleh\FilamentShield\Traits\HasPanelShield;
 
     protected $fillable = [
         'avatar_url',
@@ -52,10 +52,7 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
         return 'https://www.gravatar.com/avatar/' . $hash . '?d=mp&r=g&s=250';
     }
 
-    public function canAccessPanel(Panel $panel): bool
-    {
-        return $this->role === 'admin';
-    }
+
 
     public function profile(): HasOne
     {
